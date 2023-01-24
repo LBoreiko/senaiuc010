@@ -1,3 +1,9 @@
+CREATE TABLE `unidademedida` (
+  `idUnidadeMedida` int(11) NOT NULL,
+  `descricao` varchar(200) DEFAULT NULL,
+  PRIMARY KEY (`idUnidadeMedida`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 CREATE TABLE `produtos` (
   `idProduto` int(11) NOT NULL AUTO_INCREMENT,
   `nomeProduto` varchar(200) DEFAULT NULL,
@@ -8,12 +14,6 @@ CREATE TABLE `produtos` (
   KEY `produtos_FK` (`idUnidadeMedida`),
   CONSTRAINT `produtos_FK` FOREIGN KEY (`idUnidadeMedida`) REFERENCES `unidademedida` (`idUnidadeMedida`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4;
-
-CREATE TABLE `unidademedida` (
-  `idUnidadeMedida` int(11) NOT NULL,
-  `descricao` varchar(200) DEFAULT NULL,
-  PRIMARY KEY (`idUnidadeMedida`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 INSERT INTO `unidademedida` VALUES (1,'Kilos'),(2,'Unidade'),(3,'Litros');
 
