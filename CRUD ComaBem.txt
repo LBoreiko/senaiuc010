@@ -1,0 +1,25 @@
+**//Inserir um novo produto//
+
+INSERT INTO comabem.produtos(nomeProduto, valorProduto ,quantidade,idUnidadeMedida  
+) VALUES ('Requeijão', 10, '1', '2');
+
+**//Alterar um produto já cadastrado//
+
+
+UPDATE comabem.produtos
+SET nomeProduto='Requeijão Cremoso', valorProduto=15, quantidade=2, idUnidadeMedida=2
+WHERE idProduto=5;
+
+
+**//Selecionar algo nas tabelas// 
+
+SELECT * FROM comabem.produtos p 
+
+SELECT nomeProduto FROM comabem.produtos p 
+SELECT descricao FROM comabem.unidademedida u 
+
+**// Deletar um produto
+
+
+DELETE FROM comabem.produtos WHERE idProduto=5;
+
